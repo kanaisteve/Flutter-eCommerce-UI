@@ -14,31 +14,32 @@ class OtpBody extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenWidth(20),
-        ),
-        child: Column(
-          children: [
-            SizedBox(height: SizeConfig.screenHeight * 0.05), //5%
-            Text(
-              "OTP Verification",
-              style: headingStyle,
-            ),
-            const Text("We sent your code to +260 975 651 ***"),
-            buildTimer(),
-            SizedBox(height: SizeConfig.screenHeight * 0.15), //15%
-            OtpForm(),
-            SizedBox(height: SizeConfig.screenHeight * 0.1), //10%
-            GestureDetector(
-              onTap: () {
-                // resend your OTP
-              },
-              child: const Text(
-                "Resend OTP Code",
-                style: TextStyle(decoration: TextDecoration.underline),
+        padding:
+            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: SizeConfig.screenHeight * 0.05), //5%
+              Text(
+                "OTP Verification",
+                style: headingStyle,
               ),
-            ),
-          ],
+              const Text("We sent your code to +260 975 651 ***"),
+              buildTimer(),
+              SizedBox(height: SizeConfig.screenHeight * 0.15), //15%
+              OtpForm(),
+              SizedBox(height: SizeConfig.screenHeight * 0.1), //10%
+              GestureDetector(
+                onTap: () {
+                  // resend your OTP
+                },
+                child: const Text(
+                  "Resend OTP Code",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

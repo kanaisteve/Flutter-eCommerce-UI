@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_ui_kit/screens/auth/register_screen.dart';
 import 'package:flutter_ui_kit/screens/complete_profile/complete_profile_screen.dart';
+import 'package:flutter_ui_kit/screens/home/home_screen.dart';
 import 'package:flutter_ui_kit/screens/login_success/login_success_screen.dart';
 import 'package:flutter_ui_kit/screens/otp/otp_screen.dart';
 import 'package:flutter_ui_kit/screens/splash/splash_screen.dart';
@@ -17,4 +18,5 @@ final Map<String, WidgetBuilder> routes = {
   RegisterScreen.routeName: (context) => RegisterScreen(),
   CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
   OtpScreen.routeName: (context) => OtpScreen(),
+  HomeScreen.routeName: (context) => HomeScreen(),
 };
